@@ -6,6 +6,7 @@
     { "src": "/app/static/*", "use": "@now/static" }
   ],
   "routes": [
+    { "src": "/api", "dest": "api/api.js" },
     { "src": "/api/(.*)", "dest": "api/api.js" },
     { "src": "/static/(.*)", "dest": "app/static/$1" },
     { "src": "/(.*)", "dest": "/app/$1" }
