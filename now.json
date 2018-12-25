@@ -2,6 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "api/api.js", "use": "@now/node-server" },
-    { "src": "app/next.config.js", "use": "@now/next" }
+    { "src": "app/next.config.js", "use": "@now/next" },
+    { "src": "app/static/*", "use": "@now/static" }
   ]
 }
