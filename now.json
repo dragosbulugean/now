@@ -1,12 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/api.js", "use": "@now/node-server" },
-    { "src": "app/next.config.js", "use": "@now/next" },
-    { "src": "app/static/*", "use": "@now/static" }
+    { "src": "/api/api.js", "use": "@now/node-server" },
+    { "src": "/app/next.config.js", "use": "@now/next" },
+    { "src": "/app/static/*", "use": "@now/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/api/(.*)", "dest": "api/api.js" },
+    { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "/app/$1" }
   ]
 }
